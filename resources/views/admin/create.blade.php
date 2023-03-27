@@ -7,7 +7,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="loginModalLabel">Create Admin User</h1>
+                <h1 class="modal-title fs-5" id="loginModalLabel">Create Secretry User</h1>
             </div>
             <div class="modal-body">
                 <form action="{{ route('admin.store') }}" method="POST">
@@ -31,6 +31,22 @@
                         </div>
                         <div class="col-8">
                             <input type="email" id="email" class="form-control" name="email">
+                            <div class="col-12">
+                                <span class="form-text text-danger" hidden>
+                                    Error
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 align-items-center mt-2">
+                        <div class="col-3">
+                            <label for="email" class="col-form-label">Type</label>
+                        </div>
+                        <div class="col-8">
+                            <select class="form-select" name="type">
+                                <option value="true">Internal</option>
+                                <option value="false">External</option>
+                            </select>
                             <div class="col-12">
                                 <span class="form-text text-danger" hidden>
                                     Error
@@ -104,7 +120,7 @@
                         </div>
                     </div>
                     <div class="text-center mt-3">
-                        <input type="submit" value="Create Admin" class="btn btn-outline-primary">
+                        <input type="submit" value="Create User" class="btn btn-outline-primary">
                     </div>
                     <span class="form-text text-danger">
                         @if (Session::has('error'))

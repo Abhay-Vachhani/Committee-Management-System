@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('member_id');
-            $table->boolean('type');
+            $table->boolean('type'); // true for internal and false for external
             $table->string('name');
             $table->string('designation');
             $table->string('department');

@@ -43,7 +43,7 @@ class MemberController extends Controller
             $member = new Member();
             $member->member_id = $user->id;
             $member->name = $request->name;
-            $member->type = false;
+            $member->type = $request->type == "true" ? true : false;
             $member->designation = $request->designation;
             $member->department = $request->department;
             $member->organization = $request->organization;
