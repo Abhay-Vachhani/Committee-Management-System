@@ -34,10 +34,12 @@ class MemberController extends Controller
     {
         $user = User::where('email', '=', $request->email)->first();
         if ($user === null) {
+            $password = Str::random(15);
+
             $user = new User();
             $user->name = $request->name;
             $user->email = $request->email;
-            $user->password = Hash::make(Str::random(15));
+            $user->password = Hash::make($password);
             $user->save();
 
             $member = new Member();
@@ -53,7 +55,7 @@ class MemberController extends Controller
             $member->is_admin = true;
             $member->save();
 
-            return ['message' => 'User created'];
+            return ['message' => 'User created', 'pass' => $password];
         }
 
         return ['error' => 'User already exists'];

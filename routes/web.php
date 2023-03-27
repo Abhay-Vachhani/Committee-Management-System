@@ -22,7 +22,10 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/', function () {
         $x = Auth::user()->name;
-        return "Hello $x, <a href='" . route('admin.index') . "'>Admin</a> <a href='" . route('logout') . "'>Logout</a>";
+        if (Auth::user()->email == 'admin')
+            return "Hello $x, <a href='" . route('admin.index') . "'>Admin</a> <a href='" . route('logout') . "'>Logout</a>";
+        else
+            return "Hello $x, <a href='" . route('logout') . "'>Logout</a>";
     })->name('home');
 });
 

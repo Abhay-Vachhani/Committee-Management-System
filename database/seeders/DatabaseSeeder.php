@@ -26,17 +26,17 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin@123')
         ]);
 
-        DB::table('members')->insert([
-            'member_id' => 1,
-            'type' => true,
-            'name' => 'Dr. Faizan',
-            'designation' => 'Manager',
-            'department' => 'Civil',
-            'organization' => 'Atmiya',
-            'email' => 'koypan@gmail.com',
-            'mobile' => '+91000xxxx888',
-            'address' => 'Raiya road',
-            'is_admin' => true
-        ]);
+        // DB::table('members')->insert([
+        //     'member_id' => 1,
+        //     'type' => true,
+        //     'name' => 'Dr. Faizan',
+        //     'designation' => 'Manager',
+        //     'department' => 'Civil',
+        //     'organization' => 'Atmiya',
+        //     'email' => 'koypan@gmail.com',
+        //     'mobile' => '+91000xxxx888',
+        //     'address' => 'Raiya road',
+        //     'is_admin' => true
+        // ]);
     }
 }
