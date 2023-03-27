@@ -11,7 +11,7 @@
                 {{-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> --}}
             </div>
             <div class="modal-body">
-                <a href="{{ route('admin.create') }}" class="btn btn-outline-primary">Create Secretary Account</a>
+                <a href="{{ route('admin.create') }}" class="btn btn-outline-primary">Create Admin Account</a>
             </div>
         </div>
     </div>

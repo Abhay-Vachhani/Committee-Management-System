@@ -7,7 +7,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="loginModalLabel">Create Secretary User</h1>
+                <h1 class="modal-title fs-5" id="loginModalLabel">Create Admin User</h1>
             </div>
             <div class="modal-body">
                 <form action="{{ route('admin.store') }}" method="POST">
