@@ -10,7 +10,7 @@
                 <h1 class="modal-title fs-5" id="loginModalLabel">Create Admin User</h1>
             </div>
             <div class="modal-body">
-                <form action="{{ route('login') }}" method="POST">
+                <form action="{{ route('admin.store') }}" method="POST">
                     @csrf
                     <div class="row g-3 align-items-center">
                         <div class="col-3">
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="text-center mt-3">
-                        <input type="submit" value="Login" class="btn btn-outline-primary">
+                        <input type="submit" value="Create Admin" class="btn btn-outline-primary">
                     </div>
                     <span class="form-text text-danger">
                         @if (Session::has('error'))
