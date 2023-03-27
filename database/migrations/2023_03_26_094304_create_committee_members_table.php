@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('committee_id');
             $table->unsignedBigInteger('member_id');
             $table->boolean('is_chair_person');
-            $table->boolean('is_member_secretry');
+            $table->boolean('is_member_secretary');
             $table->timestamps();
 
             $table->foreign('committee_id')->references('id')->on('committees')->onDelete('cascade');
