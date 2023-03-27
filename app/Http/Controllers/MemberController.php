@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Member;
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class MemberController extends Controller
 {
@@ -29,7 +32,31 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::where('email', '=', $request->email)->first();
+        if ($user === null) {
+            $user = new User();
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = Hash::make(Str::random(15));
+            $user->save();
+
+            $member = new Member();
+            $member->member_id = $user->id;
+            $member->name = $request->name;
+            $member->type = false;
+            $member->designation = $request->designation;
+            $member->department = $request->department;
+            $member->organization = $request->organization;
+            $member->email = $request->email;
+            $member->mobile = $request->mobile;
+            $member->address = $request->address;
+            $member->is_admin = true;
+            $member->save();
+
+            return ['message' => 'User created'];
+        }
+
+        return ['error' => 'User already exists'];
     }
 
     /**
