@@ -8,6 +8,7 @@ use App\Models\Attendance;
 use App\Models\Committee;
 use App\Models\Member;
 use App\Models\User;
+use App\Models\Agenda;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -24,9 +25,10 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Attendance::factory(30)->create();
         User::factory(30)->create();
         Member::factory(30)->create();
         Committee::factory(10)->create();
+        Agenda::factory(10)->create();
+        Attendance::factory(30)->create();
     }
 }
