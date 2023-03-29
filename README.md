@@ -5,7 +5,12 @@
 composer create-project laravel/laravel ProjectName
 ```
 
-- Create fresh database and tables and seed database
+- Create database and tables
+```console
+php artisan migrate
+```
+
+- Create fresh tables and seed database
 ```console
 php artisan migrate:fresh --seed
 ```
