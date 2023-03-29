@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Committee;
 use App\Models\Member;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -24,5 +25,6 @@ class DatabaseSeeder extends Seeder
 
         User::factory(30)->create();
         Member::factory(30)->create();
+        Committee::factory(10)->create();
     }
 }
