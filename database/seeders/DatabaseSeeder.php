@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Attendance;
 use App\Models\Committee;
 use App\Models\Member;
 use App\Models\User;
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        Attendance::factory(30)->create();
         User::factory(30)->create();
         Member::factory(30)->create();
         Committee::factory(10)->create();
