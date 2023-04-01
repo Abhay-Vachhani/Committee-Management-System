@@ -15,7 +15,6 @@ return new class extends Migration
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Meeting::class);
-            // $table->integer('meeting_id');
             $table->integer('agenda_order');
             $table->text('title');
             $table->text('discussion');

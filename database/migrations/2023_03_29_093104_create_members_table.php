@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedBigInteger('member_id');
             $table->foreignIdFor(User::class);
             $table->boolean('type');
             $table->string('name');
@@ -24,10 +23,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('mobile');
             $table->text('address');
-            $table->boolean('is_admin');
             $table->timestamps();
-
-            // $table->foreign('member_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

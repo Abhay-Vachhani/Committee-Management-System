@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Meeting::class);
             $table->foreignIdFor(Member::class);
-            // $table->unsignedBigInteger('meeting_id');
-            // $table->unsignedBigInteger('member_id');
             $table->integer('attendance');
             $table->timestamps();
         });

@@ -29,7 +29,6 @@ class MemberFactory extends Factory
             'email' => $user->email,
             'mobile' => $this->faker->phoneNumber(),
             'address' => $this->faker->address(),
-            'is_admin' => false,
         ];
     }
 }

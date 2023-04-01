@@ -11,6 +11,8 @@ use App\Models\User;
 use App\Models\Agenda;
 use App\Models\Meeting;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -32,5 +34,12 @@ class DatabaseSeeder extends Seeder
         Meeting::factory(10)->create();
         Agenda::factory(10)->create();
         Attendance::factory(30)->create();
+
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'email' => 'admin@au.com',
+            'password' => Hash::make('admin'),
+            'is_admin' => true
+        ]);
     }
 }

@@ -15,7 +15,6 @@ return new class extends Migration
         Schema::create('meetings', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Committee::class);
-            // $table->integer('committee_id');
             $table->string('venue');
             $table->timestamp('meeting_time');
             $table->boolean('is_completed');
