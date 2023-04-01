@@ -8,3 +8,11 @@
 @auth
 <a href="{{ route('logout') }}">Logout</a>
 @endauth
+
+
+<form action="{{ route('login') }}" method="post">
+    @csrf
+    <input type="text" name="email" value="{{$email}}"><br>
+    <input type="password" name="password" value="password"><br>
+    <input type="submit" autofocus>
+</form>

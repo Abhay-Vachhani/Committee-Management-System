@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,7 +12,8 @@ class AuthController extends Controller
     {
         if (Auth::check())
             return redirect('/');
-        return view('index');
+        $email = User::get()->first()->email;
+        return view('index', compact('email'));
     }
 
     public function login(Request $request)
