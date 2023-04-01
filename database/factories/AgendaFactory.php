@@ -17,12 +17,12 @@ class AgendaFactory extends Factory
     public function definition(): array
     {
         return [
-            'meeting_id'=> $this->faker->unique()->numberBetween(1, 10),
-            'agenda_order'=> $this->faker->numberBetween(1, 3),
-            'title'=> $this->faker->sentence(3),
-            'discussion'=> $this->faker->sentence(8),
-            'resolution'=> $this->faker->sentence(7),
-            'action'=> $this->faker->sentence(8),
+            'meeting_id' => $this->faker->numberBetween(1, 10),
+            'agenda_order' => $this->faker->numberBetween(1, 3),
+            'title' => $this->faker->sentence(3),
+            'discussion' => $this->faker->sentence(8),
+            'resolution' => $this->faker->sentence(7),
+            'action' => $this->faker->sentence(8),
         ];
     }
 }

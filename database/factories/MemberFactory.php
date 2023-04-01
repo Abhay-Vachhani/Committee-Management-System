@@ -17,10 +17,10 @@ class MemberFactory extends Factory
      */
     public function definition(): array
     {
-        $user = User::find($this->faker->unique()->numberBetween(1,30));
+        $user = User::find($this->faker->unique()->numberBetween(1, 30));
 
         return [
-            'member_id' => $user->id,
+            'user_id' => $user->id,
             'name' => $user->name,
             'type' => $this->faker->boolean(),
             'designation' => $this->faker->sentence(3),

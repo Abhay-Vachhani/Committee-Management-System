@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Meeting;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,7 +14,8 @@ return new class extends Migration
     {
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
-            $table->integer('meeting_id');
+            $table->foreignIdFor(Meeting::class);
+            // $table->integer('meeting_id');
             $table->integer('agenda_order');
             $table->text('title');
             $table->text('discussion');

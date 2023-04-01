@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Meeting;
+use App\Models\Member;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('meeting_id');
-            $table->unsignedBigInteger('member_id');
+            $table->foreignIdFor(Meeting::class);
+            $table->foreignIdFor(Member::class);
+            // $table->unsignedBigInteger('meeting_id');
+            // $table->unsignedBigInteger('member_id');
             $table->integer('attendance');
             $table->timestamps();
         });
