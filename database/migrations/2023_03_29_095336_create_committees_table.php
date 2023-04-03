@@ -16,9 +16,9 @@ return new class extends Migration
             $table->boolean('type');
             $table->string('name');
             $table->string('short_name');
-            $table->timestamp('effect_date');
+            $table->timestamp('effect_date')->nullable();
             $table->timestamp('restructuring_date')->nullable();
-            $table->integer('meeting_frequency');
+            $table->integer('meeting_frequency')->nullable();
             $table->timestamps();
         });
     }

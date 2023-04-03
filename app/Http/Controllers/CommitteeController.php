@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Committee;
+use App\Models\Member;
 use Illuminate\Http\Request;
 
 class CommitteeController extends Controller
@@ -28,7 +29,17 @@ class CommitteeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Committee::where('short_name', '=', $request->short_name)->first() != null || Committee::where('name', '=', $request->name)->first() != null) {
+            return ['Error' => 'Committee exists'];
+        }
+
+        $committee = new Committee();
+        $committee->type = $request->type;
+        $committee->name = $request->name;
+        $committee->short_name = $request->short_name;
+        $committee->save();
+
+        return Member::all();
     }
 
     /**
