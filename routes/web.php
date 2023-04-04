@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommitteeController;
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\Member;
-use App\Models\Member as ModelsMember;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -38,11 +38,7 @@ Route::middleware('auth')->group(function () {
 
 // Admin routes
 Route::middleware(['auth', Admin::class])->prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {
-        // return 'Welcome, ' . Auth::user()->email . ' to admin panel';
-        $members = ModelsMember::all();
-        return view('admin.create_committee', compact('members'));
-    })->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 
     Route::get('/create/committee', [CommitteeController::class, 'store'])->name('committee.create');
 });

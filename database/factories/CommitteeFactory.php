@@ -17,12 +17,12 @@ class CommitteeFactory extends Factory
     public function definition(): array
     {
         return [
-            'type'=>$this->faker->boolean(),
-            'name'=>$this->faker->sentence(3),
-            'short_name'=>$this->faker->sentence(1),
-            'effect_date'=>$this->faker->date(),
-            'restructuring_date'=>$this->faker->date(),
-            'meeting_frequency'=>$this->faker->numberBetween(1,7)
+            'type' => $this->faker->boolean(),
+            'name' => $this->faker->sentence(3),
+            'short_name' => $this->faker->unique()->sentence(1),
+            'effect_date' => $this->faker->date(),
+            'restructuring_date' => $this->faker->date(),
+            'meeting_frequency' => $this->faker->numberBetween(1, 7)
         ];
     }
 }

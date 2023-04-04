@@ -17,9 +17,9 @@ return new class extends Migration
             $table->foreignIdFor(Meeting::class);
             $table->integer('agenda_order');
             $table->text('title');
-            $table->text('discussion');
-            $table->text('resolution');
-            $table->text('action');
+            $table->text('discussion')->nullable()->default(null);
+            $table->text('resolution')->nullable()->default(null);
+            $table->text('action')->nullable()->default(null);
             $table->timestamps();
         });
     }

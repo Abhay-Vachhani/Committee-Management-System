@@ -21,7 +21,8 @@ class AgendaFactory extends Factory
             'agenda_order' => $this->faker->numberBetween(1, 3),
             'title' => $this->faker->sentence(3),
             'discussion' => $this->faker->sentence(8),
-            'resolution' => $this->faker->sentence(7),
+            // 'resolution' => $this->faker->sentence(7),
+            'resolution' => $this->faker->boolean(60) ? $this->faker->sentence(7) : null,
             'action' => $this->faker->sentence(8),
         ];
     }
