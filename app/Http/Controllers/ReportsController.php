@@ -3,35 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\Committee;
+use App\Models\Meeting;
 use Dompdf\Dompdf;
 use Exception;
 use Illuminate\Http\Request;
 
 class ReportsController extends Controller
 {
-    function attendanceReport()
+    function attendanceReport(Request $request)
     {
-        $id = 2;
-        $dompdf = new Dompdf();
-        $commitess = Committee::find($id);
+        $meeting = Meeting::findOrFail($request->meeting_id);
 
-        $data = [
-            'title' => 'Attendance Sheet',
-            'commitess' => $commitess,
-            'meetings' => $commitess->meeting_details->first(),
-            'members' => $commitess->committee_members_details
-        ];
+        $pdf = new Dompdf();
         
-        try {
-            $pdf = app('dompdf.wrapper');
+        $pdf->loadHtml(view('reports.attendance', compact('meeting')));
+        $pdf->render();
 
-            $pdf->setPaper('A4', 'portrait');
+        return $pdf->stream("attendanceReport.pdf", ["Attachment" => false]);
 
-            $pdf->loadView('admin.ReportPDF.attendance', $data);
-        } catch (Exception $e) {
-            return back()->with('error', 'Error generating PDF: ' . $e->getMessage());
-        }
-        // return $pdf->download('Attendance_report_' . date('YmdHis') . '.pdf');
-        return $pdf->stream();
+        // return $pdf->stream();
     }
 }

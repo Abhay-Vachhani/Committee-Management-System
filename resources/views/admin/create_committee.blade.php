@@ -132,7 +132,7 @@
                                     <td>{{$key}}-{{ $value }}</td>
                                 @endforeach  --}}
                                 <td scope="col"></td>
-                                <td scope="col"><button class="btn btn-outline-info text-danger-emphasis border border-danger-subtle" data-bs-toggle="modal" data-bs-target="#reportModal">View / Print</button></td>
+                                <td scope="col"><a class="btn btn-outline-info text-danger-emphasis border border-danger-subtle" href="http://127.0.0.1/admin/reports/attendance_report.pdf?meeting_id={{$meeting->meeting}}">View / Print</a></td>
                                 <td scope="col"></td>
                                 <td scope="col"></td>
                             </tr> 
@@ -193,7 +193,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <iframe src="https://www.cusd.com/Downloads/Displaying%20a%20PDF2.pdf" frameborder="0"></iframe>
+                        {{-- <iframe src="" style="width: 100%; height: 1000px;"></iframe> --}}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
