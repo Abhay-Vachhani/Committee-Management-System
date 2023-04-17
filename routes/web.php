@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommitteeController;
+use App\Http\Controllers\ReportsController;
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\Member;
 use Illuminate\Support\Facades\Auth;
@@ -39,8 +40,12 @@ Route::middleware('auth')->group(function () {
 // Admin routes
 Route::middleware(['auth', Admin::class])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-
-    Route::get('/create/committee', [CommitteeController::class, 'store'])->name('committee.create');
+    
+    Route::post('/create/committee', [CommitteeController::class, 'store'])->name('committee.create');
+    
+    Route::prefix('reports')->group(function () {
+        Route::get('/attendance_report.pdf', [ReportsController::class, 'attendanceReport'])->name('admin.attendanceReport');
+    });
 });
 
 // User routes

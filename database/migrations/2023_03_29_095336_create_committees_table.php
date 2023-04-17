@@ -19,7 +19,12 @@ return new class extends Migration
             $table->timestamp('effect_date')->nullable();
             $table->timestamp('restructuring_date')->nullable();
             $table->integer('meeting_frequency')->nullable();
+            $table->unsignedBigInteger('chair_person')->nullable();
+            $table->unsignedBigInteger('secratory')->nullable();
             $table->timestamps();
+
+            // $table->foreign('chair_person')->references('id')->on('committee_members')->nullOnDelete();
+            // $table->foreign('secratory')->references('id')->on('committee_members')->nullOnDelete();
         });
     }
 

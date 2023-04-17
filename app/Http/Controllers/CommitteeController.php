@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Committee;
+use App\Models\CommitteeMember;
 use App\Models\Member;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CommitteeController extends Controller
 {
@@ -33,13 +36,32 @@ class CommitteeController extends Controller
             return ['Error' => 'Committee exists'];
         }
 
+        
         $committee = new Committee();
         $committee->type = $request->type;
         $committee->name = $request->name;
         $committee->short_name = $request->short_name;
+        $committee->effect_date = $request->effect_date;
+        $committee->restructuring_date = $request->restructuring_date;
+        $committee->meeting_frequency = $request->meeting_frequency;
         $committee->save();
-
-        return Member::all();
+        
+        $memberIds = explode(',', $request->selected_member);
+        
+        foreach ($memberIds as $memberId) {
+            $member = Member::find($memberId);
+            $committeeMember = new CommitteeMember();
+            $committeeMember->committee_id = $committee->id;
+            $committeeMember->member_id = $member->id;
+            $committeeMember->save();
+        }
+        
+        $committee->secratory = $request->selected_secratory;
+        $committee->chair_person = $request->selected_chair_person;
+        $committee->save();
+        
+        return redirect()->route('admin.dashboard');
+        // return "<script>alert('Committee Created')</script>";
     }
 
     /**
