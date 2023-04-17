@@ -132,7 +132,7 @@
                                     <td>{{$key}}-{{ $value }}</td>
                                 @endforeach  --}}
                                 <td scope="col"></td>
-                                <td scope="col"><a class="btn btn-outline-info text-danger-emphasis border border-danger-subtle" href="http://127.0.0.1/admin/reports/attendance_report.pdf?meeting_id={{$meeting->meeting}}">View / Print</a></td>
+                                <td scope="col"><a class="btn btn-outline-info text-danger-emphasis border border-danger-subtle" href="/admin/reports/attendance_report.pdf?meeting_id={{$meeting->meeting}}">View / Print</a></td>
                                 <td scope="col"></td>
                                 <td scope="col"></td>
                             </tr> 
