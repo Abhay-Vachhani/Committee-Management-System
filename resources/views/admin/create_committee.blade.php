@@ -12,6 +12,7 @@
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> --}}
     <style>
+       
         @media screen and (min-width: 600px ) {
                         .container .row h3 {
                             text-align: center
@@ -30,7 +31,7 @@
         }
 
         section{
-            background-image: url("https://c4.wallpaperflare.com/wallpaper/686/903/613/soft-gradient-solid-color-gradient-hd-wallpaper-preview.jpg");
+            background-image: url('../img/bg.jpg');
             background-color: #cccccc;
             background-repeat: no-repeat ;
             background-size: cover;
@@ -131,7 +132,7 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif
         }
         .modal-body label{
-            background-color: #efefef;
+            /* background-color: #efefef; */
             padding: 9px 10px;
             border: none;
             box-shadow: 0px 0 4px black;
@@ -208,6 +209,20 @@
             background-color:#95762d ;
             color: white;
         }
+        #meeting_data_table_length{
+            margin-bottom: 27px;
+            font-size: 1.2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left:20px
+        }
+        #meeting_data_table_filter{
+            margin-bottom: 27px;
+            font-size: 1.2em;
+            margin-right: 45px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+    
     </style>
 </head>
 <body>
