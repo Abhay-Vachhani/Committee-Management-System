@@ -350,7 +350,7 @@
                                     <td>{{$key}}-{{ $value }}</td>
                         @endforeach --}}
                         <td scope="col"></td>
-                        <td scope="col"><a class="btn new-btn-reverse " href="/admin/reports/attendance_report.pdf?meeting_id={{$meeting->meeting}}">View / Print</a></td>
+                        <td scope="col"><a class="btn new-btn-reverse " href="{{ route('admin.committeeConstitutionReport', ['committee_id'=>$meeting->committee_id]) }}">View / Print</a></td>
                         <td scope="col"></td>
                         <td scope="col"></td>
                     </tr>

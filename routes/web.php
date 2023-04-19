@@ -45,6 +45,7 @@ Route::middleware(['auth', Admin::class])->prefix('admin')->group(function () {
     
     Route::prefix('reports')->group(function () {
         Route::get('/attendance_report.pdf', [ReportsController::class, 'attendanceReport'])->name('admin.attendanceReport');
+        Route::get('/committee_constitution_report.pdf', [ReportsController::class, 'committeeConstitutionReport'])->name('admin.committeeConstitutionReport');
     });
 });
 
