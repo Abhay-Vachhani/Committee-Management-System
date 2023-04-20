@@ -310,6 +310,7 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="col "></div>
             </div>
             <input type="hidden" id="selected_chair_person" name="selected_chair_person">
@@ -357,6 +358,97 @@
                     @endforeach
                 </tbody>
             </table>
+=======
+                <input type="hidden" id="selected_chair_person" name="selected_chair_person">
+                <input type="hidden" id="selected_secratory" name="selected_secratory">
+                <input type="hidden" id="selected_member" name="selected_member">
+            </form>
+        </div>
+        <div class="container-fluid table-responsive">
+            <div class="mt-5">
+                <table class="table text-center" id="meeting_data_table">
+                    <thead>
+                        <tr>
+                            <th>Sr No.</th>
+                            <th scope="col">Committee</th>
+                            <th scope="col">No. of Members</th>
+                            <th scope="col">Meeting No</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">No of Agenda</th>
+                            <th scope="col">No of Resolution</th>
+                            <th scope="col">Present Members</th>
+                            <th scope="col">Agenda and Resolution</th>
+                            <th scope="col">Report</th>
+                            <th scope="col">Status</th>
+                            {{-- <th scope="col">Next Date</th> --}}
+                        </tr>
+                    </thead>
+                    <tbody class="small"> 
+                        @foreach ($meetings as $meeting)
+                            <tr>
+                                <th>{{ $loop->iteration }}</th>
+                                <td>{{ $meeting->short_name }}</td>
+                                <td>{{ $meeting->no_of_members }}</td>
+                                <td>{{ $meeting->meeting_id }}</td>
+                                <td>{{ $meeting->meeting_time }}</td>
+                                <td>{{ $meeting->no_of_agendas }}</td>
+                                <td>{{ $meeting->no_of_resolutions }}</td>
+                                <td>{{ $meeting->present_members }}</td>
+                                {{-- @foreach ($meeting as $key => $value) 
+                                    <td>{{$key}}-{{ $value }}</td>
+                                @endforeach  --}}
+                                <td scope="col"><button class="btn btn-outline-danger" @if ($meeting->is_completed)hidden @endif>Add / Edit</button></td>
+                                <td scope="col"><a class="btn btn-outline-info text-danger-emphasis border border-danger-subtle" href="{{ route('admin.committeeConstitutionReport', ['committee_id'=>$meeting->committee_id]) }}">View / Print</a></td>
+                                <td scope="col">@if ($meeting->is_completed)Completed @endif</td>
+                                {{-- <td scope="col"></td> --}}
+                            </tr> 
+                        @endforeach 
+                    </tbody>
+                </table>
+            </div>
+            <!-- Member Modal -->
+            <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="memberModalLabel"> Select Members </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table" id="member_data_table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center">Member Name</th>
+                                        <th scope="col" class="text-center">Designation</th>
+                                        <th scope="col" class="text-center">Chair Person</th>
+                                        <th scope="col" class="text-center">Secratory</th>
+                                        <th scope="col" class="text-center">Member</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="members"> @foreach ($members as $member) <tr>
+                                        <td>{{$member->name}}</td>
+                                        <td>{{$member->designation}}</td>
+                                        <td class="text-center">
+                                            <input class="form-check-input" type="checkbox" onchange="checkBoxChecked(this)" id="chair_person_{{$member->id}}">
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input" type="checkbox" onchange="checkBoxChecked(this)" id="secratory_{{$member->id}}">
+                                        </td>
+                                        <td class="text-center">
+                                            <input class="form-check-input" type="checkbox" onchange="checkBoxChecked(this)" id="member_{{$member->id}}">
+                                        </td>
+                                    </tr> @endforeach </tbody>
+                            </table>
+                            <script></script>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="getSelectedMembers()">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+>>>>>>> 4754194 (Admin home page table changed)
         </div>
         <!-- Member Modal -->
         <div class="modal fade" id="memberModal" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
