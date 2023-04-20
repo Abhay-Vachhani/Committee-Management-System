@@ -158,6 +158,11 @@
             background-color:#95762d ;
             color: white;
         }
+    tbody tr:hover {
+            box-shadow: 0px 0px 4px black;
+            position: relative;
+            top: 2px;
+        }
    
     </style>
 </head>
