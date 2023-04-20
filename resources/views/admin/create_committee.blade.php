@@ -13,64 +13,56 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> --}}
     <style>
        
-        @media screen and (min-width: 600px ) {
+    /* font used */
+    .font-lucida{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',  Verdana, sans-serif !important;
+       }
+    .font-verdana{
+            font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+       }
+    .bg-aliceblue{
+         background-color: aliceblue
+     }
+     .bg-darkblue{
+        background-color: #252258 !important;
+     }
+     .text-darkblue{
+        color: #252258 !important;
+     }
+    @media screen and (min-width: 600px ) {
                         .container .row h3 {
                             text-align: center
                         }
         }
-        @media screen and (max-width: 600px ) {
+    @media screen and (max-width: 600px ) {
                         .container .row h3 {
                             text-align: center;
                         }
         }
 
-        body{
+    body{
             box-sizing: border-box;
-            /* overflow: hidden; */
-            /* background-color: #f2f2f2; */
         }
 
-        section{
+    .container .row h3  {
+        letter-spacing: 1px;
+        word-spacing:1px;
+        margin-bottom:20px;
+        padding:10px;
+        background-color:#b18f40;
+    }
+    section{
             background-image: url('../img/bg.jpg');
-            background-color: #cccccc;
             background-repeat: no-repeat ;
             background-size: cover;
             background-position: center;
-            /* background-image: linear-gradient(rgb(255, 255, 255), rgb(147, 183, 255), rgb(255, 255, 255)); */
-            /* background-image:radial-gradient(rgb(241, 241, 241),rgb(255, 185, 185)); */
     }
-        
      .col-form-label{
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
         font-size:1.4em;
         color: navy;
-        /* font-weight: bolder; */
      }
      .bg-transparent{
-        background-color: #252258 !important;
         color: white;
-     }
-     .card-body{
-        background-color: aliceblue
-     }
-     /* .btn-member{
-        background-color: #252258;
-        color: white; 
-     }
-     .btn-member:hover{
-        background-color: transparent;
-        border: 2px solid #252258;
-        color: #252258
-    } */
-    .btn-create-comittee{
-        background-color: #252258;
-        color: white; 
-        font-size: larger;
-    }
-    .btn-create-comittee:hover{
-        background-color: transparent;
-        border: 2px solid #252258;
-        color: #252258
      }
      .form-control,.form-select{
         padding: 10px;
@@ -95,13 +87,12 @@
             border: none;
         }
 
-        .btn-grad:hover {
+     .btn-grad:hover {
             background-position: right center;
             /* change the direction of the change here */
             color: #fff;
             text-decoration: none;
         }
-        /*  */
      .btn-grad2 {
             background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
             margin: 10px;
@@ -118,21 +109,20 @@
             margin: auto
         }
 
-        .btn-grad2:hover {
+    .btn-grad2:hover {
             background-position: right center;
             /* change the direction of the change here */
             color: #fff;
             text-decoration: none;
         }
-        .form-control,.form-select{
+    .form-control,.form-select{
             background-color: transparent;
             border: 2px solid #252258;
         }
-        select{
+    select{
             font-family: Verdana, Geneva, Tahoma, sans-serif
         }
-        .modal-body label{
-            /* background-color: #efefef; */
+    .modal-body label{
             padding: 9px 10px;
             border: none;
             box-shadow: 0px 0 4px black;
@@ -140,52 +130,11 @@
             margin-bottom: 20px;
 
         }
-        .modal-body table th {
-            background-color: #252258;
-            color: white;
-        }
-        .modal-body{
-            font-family:Verdana, Geneva, Tahoma, sans-serif
-        }
-        .form-check-input:checked{
+    .form-check-input:checked{
             background-color: #252258;
             border: transparent;
         }
-        /*  */
-        /* #member_data_table_previous{
-            background-color: #252258 !important;
-            color: white !important;
-            border-radius: 4px;
-            
-        }
-        #member_data_table_previous:hover{
-            background-color: transparent !important ;
-            color: #252258 !important;
-            border:1px solid #252258;
-            border-radius: 4px;
-
-        }
-        .paginate_button{
-            background-color: #252258 !important;
-            color: white !important;
-        }
-
-        .btn-color{
-            background-color: #252258 !important;
-            color: white !important;
-            border-radius: 4px;
-        }
-        .dataTables_wrapper .dataTables_paginate .paginate_button.current{
-            background-color: #252258 !important;
-            color: white !important;
-            border-radius: 4px;
-        } */
-        /*  */
-
-        .btn{
-            font-family: Verdana, Geneva, Tahoma, sans-serif !important ;
-        }
-        .new-btn{
+    .new-btn{
             background-color: #252258;
             color: white;
             border: 1px solid #252258;
@@ -193,36 +142,23 @@
             padding: 10px;
            
         }
-        .new-btn:hover{
+    .new-btn:hover{
             border: 1px solid #252258;
             color: #252258;
         }
 
-        .new-btn-reverse{
+    .new-btn-reverse{
             background-color: #b18f40;
             color: white;
             border: 1px solid transparent;
             border-radius: 4px;
             padding: 8px;
         }
-        .new-btn-reverse:hover{
+    .new-btn-reverse:hover{
             background-color:#95762d ;
             color: white;
         }
-        #meeting_data_table_length{
-            margin-bottom: 27px;
-            font-size: 1.2em;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin-left:20px
-        }
-        #meeting_data_table_filter{
-            margin-bottom: 27px;
-            font-size: 1.2em;
-            margin-right: 45px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            
-        }
-    
+   
     </style>
 </head>
 <body>
@@ -232,18 +168,18 @@
     <div class="container">
         <div class="row">
             <div class="col mt-5">
-                <h3 class="fw-bold fs-1 " style="letter-spacing: 1px;word-spacing:1px;color:#252258;margin-bottom:20px;padding:10px;background-color:#b18f40;color:white">ADMIN LOGIN SCREEN</h3>
+                <h3 class="fw-bold fs-1 text-white">ADMIN LOGIN SCREEN</h3>
         </div>
         <form action="{{ route('committee.create') }}" method="POST">
             @csrf
             <div class="row">
                 <div class="col col-12 col-sm-12 col-md-12">
                     <div class="card border-success mb-3">
-                        <div class="card-header bg-transparent border-success fw-semibold fs-4" >Committee Constituion</div>
-                        <div class="card-body text-success ">
+                        <div class="card-header bg-transparent bg-darkblue border-success fw-semibold fs-4" >Committee Constituion</div>
+                        <div class="card-body bg-aliceblue">
                             <div class="row g-3 align-items-center ">
                                 <div class="col-md-3 col-12">
-                                    <label for="inputText" class="col-form-label">Type</label>
+                                    <label for="inputText" class="col-form-label font-verdana">Type</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
                                     <select class="form-select" aria-label="Default select example" name="type">
@@ -254,7 +190,7 @@
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
                                 <div class="col-md-3 col-12">
-                                    <label for="inputText " class="col-form-label ">Name</label>
+                                    <label for="inputText " class="col-form-label font-verdana">Name</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
                                     <input type="text " class="form-control " name="name" onkeyup="handleShortName(this)">
@@ -262,7 +198,7 @@
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
                                 <div class="col-md-3 col-12">
-                                    <label for="inputText " class="col-form-label">Short Name</label>
+                                    <label for="inputText " class="col-form-label font-verdana">Short Name</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
                                     <input type="text " class="form-control" name="short_name" id="short_name">
@@ -270,7 +206,7 @@
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
                                 <div class="col-md-3 col-12">
-                                    <label for="inputText " class="col-form-label ">Members</label>
+                                    <label for="inputText " class="col-form-label font-verdana">Members</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
                                     <button type="button" class="btn-grad" data-bs-toggle="modal" data-bs-target="#memberModal"> Select Members </button>
@@ -279,7 +215,7 @@
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
                                 <div class="col-md-3 col-12">
-                                    <label for="inputText" class="col-form-label ">Effect Date</label>
+                                    <label for="inputText" class="col-form-label font-verdana ">Effect Date</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
                                     <input type="datetime-local" name="effect_date " class="form-control">
@@ -287,7 +223,7 @@
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
                                 <div class="col-md-3 col-12">
-                                    <label for="inputText " class="col-form-label">Meeting Frequency</label>
+                                    <label for="inputText " class="col-form-label font-verdana">Meeting Frequency</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
                                     <input type="number" value="0" min="0" max="20" class="form-control" name="meeting_frequency">
@@ -295,7 +231,7 @@
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
                                 <div class="col-md-3 col-12">
-                                    <label for="inputText " class="col-form-label ">Restructuring Date</label>
+                                    <label for="inputText " class="col-form-label font-verdana">Restructuring Date</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
                                     <input type="datetime-local" class="form-control" name="restructuring_date">
@@ -320,9 +256,9 @@
 </section>
     <div class="container-fluid table-responsive">
         <div class="mt-5">
-            <table class="table text-center table-striped table-hover" style="border:1px solid rgb(223, 223, 223)" id="meeting_data_table">
-                <thead style="background-color: #252258;color:white; font-family:Verdana, Geneva, Tahoma, sans-serif">
-                    <tr style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <table class="table text-center table-striped table-hover border border-white"  id="meeting_data_table">
+                <thead class="font-lucida bg-darkblue text-white">
+                    <tr>
                         <th scope="col">Sr No.</th>
                         <th scope="col">Committee</th>
                         <th scope="col">No. of Members</th>
@@ -339,7 +275,7 @@
                 </thead>
                 <tbody class="small">
                     @foreach ($meetings as $meeting)
-                    <tr  style="font-family: Verdana, Geneva, Tahoma, sans-serif ; font-size:1.2em">
+                    <tr class="font-verdana">
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $meeting->short_name }}</td>
                         <td>{{ $meeting->no_of_members }}</td>
@@ -352,7 +288,7 @@
                                     <td>{{$key}}-{{ $value }}</td>
                         @endforeach --}}
                         <td scope="col"></td>
-                        <td scope="col"><a class="btn new-btn-reverse " href="{{ route('admin.committeeConstitutionReport', ['committee_id'=>$meeting->committee_id]) }}">View / Print</a></td>
+                        <td scope="col"><a class="btn new-btn-reverse font-verdana " href="{{ route('admin.committeeConstitutionReport', ['committee_id'=>$meeting->committee_id]) }}">View / Print</a></td>
                         <td scope="col"></td>
                         <td scope="col"></td>
                     </tr>
@@ -368,9 +304,9 @@
                         <h1 class="modal-title fs-5 fw-bold fs-4" id="memberModalLabel"> Select Members </h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body font-verdana">
                         <table class="table table-striped table-hover" id="member_data_table">
-                            <thead>
+                            <thead class="font-lucida bg-darkblue text-white">
                                 <tr>
                                     <th scope="col" class="text-center">Member Name</th>
                                     <th scope="col" class="text-center">Designation</th>
@@ -379,7 +315,7 @@
                                     <th scope="col" class="text-center">Member</th>
                                 </tr>
                             </thead>
-                            <tbody id="members"> @foreach ($members as $member) <tr>
+                            <tbody id="members"> @foreach ($members as $member) <tr class="font-verdana">
                                     <td>{{$member->name}}</td>
                                     <td>{{$member->designation}}</td>
                                     <td class="text-center">
@@ -396,14 +332,13 @@
                         <script></script>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn new-btn" data-bs-dismiss="modal" onclick="getSelectedMembers()">Save changes</button>
+                        <button type="button" class="btn font-verdana" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn new-btn font-verdana" data-bs-dismiss="modal" onclick="getSelectedMembers()">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Report Modal -->
     <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-scrollable">
@@ -412,12 +347,12 @@
                     <h1 class="modal-title fs-5" id="reportModalLabel"> Meeting Report </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body font-verdana">
                     {{-- <iframe src="" style="width: 100%; height: 1000px;"></iframe> --}}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="getSelectedMembers()">Save changes</button>
+                    <button type="button" class="btn btn-secondary font-verdana" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary font-verdana" data-bs-dismiss="modal" onclick="getSelectedMembers()">Save changes</button>
                 </div>
             </div>
         </div>
