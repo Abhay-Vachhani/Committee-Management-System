@@ -294,8 +294,9 @@
                         @endforeach --}}
                         <td scope="col"></td>
                         <td scope="col"><a class="btn new-btn-reverse font-verdana " href="{{ route('admin.committeeConstitutionReport', ['committee_id'=>$meeting->committee_id]) }}">View / Print</a></td>
+                        <td scope="col"><a class="btn btn-danger btn-sm font-verdana" href="#">#</a></td>
                         <td scope="col"></td>
-                        <td scope="col"></td>
+                     
                     </tr>
                     @endforeach
                 </tbody>
