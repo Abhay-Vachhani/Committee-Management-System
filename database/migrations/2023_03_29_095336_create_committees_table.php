@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('short_name');
             $table->timestamp('effect_date')->nullable();
-            $table->timestamp('restructuring_date')->nullable();
+            $table->timestamp('valid_upto')->nullable();
             $table->integer('meeting_frequency')->nullable();
             $table->unsignedBigInteger('chair_person')->nullable();
             $table->unsignedBigInteger('secratory')->nullable();

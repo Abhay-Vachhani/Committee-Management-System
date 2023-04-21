@@ -1,0 +1,11 @@
+id,type,name,short_name,effect_date,valid_upto,meeting_frequency,chair_person,secratory
+1,0,Development committee,DC,04-07-2019,2024-04-17,10  Meetings / Year ,1,10
+2,1,Guest Faculty committee,GFC,2020-04-08,2024-04-08,2  Meetings / Year ,2,9
+3,1,Residential Committee,RC,2020-02-27,2024-02-27,7,3,7
+4,0,Prepayment Post-purchase Committee,PPC,2020-12-20,2024-12-20,5,4,8
+5,1,Purchase Committee,PC,2020-11-11,2024-11-11,7 Meetings,5,6
+6,0,Maintenance Committee,MC,2020-02-29,2024-02-29,5,6,5
+7,1,Examination Committee,EC,2020-03-22,2024-03-22,9,7,4
+8,0,Time Table Committee,TC,2020-05-26,2025-05-26,1,8,3
+9,0,Admission Committee,AC,2020-09-11,2023-09-11,8,9,2
+10,1,Library Committee,LC,2020-11-12,2024-11-12,5,10,1

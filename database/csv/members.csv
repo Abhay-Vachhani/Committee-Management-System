@@ -1,0 +1,11 @@
+id,user_id,type,name,designation,department,organization,email,mobile,address
+1,1,1,Dimple Mithiya,Teacher,MCA,Atmiya University,dimplemithiya@gmail.com,9234528336,Gandhi gram
+2,2,0,Abhay Vachhani,Programmer,BCA,Infinity,abhayvachhani@gmail.com,9951070685,AU Hostel
+3,3,1,Dev Rupani,Designer,Eng,Virani,devrupani@gmail.com,6961561800,Shivam
+4,4,1,Ushma Goda,HR,Hr Department,Atmiya University,ushmagoda@gmail.com,9738361958,Gondal RD
+5,5,0,Kajal Bagda,HOD,Science,Saurashtra University,kajalbagada@gmail.com,9766010927,Nehru nagar
+6,6,0,Pooja Parmar,Assistant Professor,MBA,Saurashtra University,poojaparmar@gmail.com,6605291190,Shree ram
+7,7,1,Ekta J,Professor,UHV Cell,Atmiya University,ektajivrajani@gmail.com,8301676499,Kankot
+8,8,1,Vishal Zala,Registrar,Management,Virani,vishalzala@gmail.com,6307696620,Aatkot
+9,9,0,Vinit Mehta,Deputy Registrar,Management,Saurashtra University,vinitmehta@gmail.com,6276952485,Palace RD
+10,10,1,Pushti ,Computer Operator,MCA,Atmiya University,pushtichavda@gmail.com,9769012231,Gurukul

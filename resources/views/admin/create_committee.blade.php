@@ -298,7 +298,7 @@
                                     <label for="inputText " class="col-form-label ">Restructuring Date</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
-                                    <input type="datetime-local" class="form-control" name="restructuring_date">
+                                    <input type="datetime-local" class="form-control" name="valid_upto">
                                 </div>
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
