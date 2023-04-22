@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Admin routes
+// Route::middleware(['auth', Admin::class])->prefix('admin')->group(function () {
+    // Route::post('/create/committee', [CommitteeController::class, 'store'])->name('committee.create');
+    Route::middleware('Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse')->post('/admin/create/committee', function(Request $request){
+        return $request;
+
+    })->name('committee.create');
+// });

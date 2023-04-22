@@ -32,8 +32,24 @@ class CommitteeController extends Controller
      */
     public function store(Request $request)
     {
+        dd('');
+        return json_encode([
+            'type'=>'error',
+            'text'=> 'Committee exists',
+            'options'=> json_encode([
+                'autoClose'=> 2000
+            ])
+        ]);
+
         if (Committee::where('short_name', '=', $request->short_name)->first() != null || Committee::where('name', '=', $request->name)->first() != null) {
-            return ['Error' => 'Committee exists'];
+            $message = [
+                'type'=>'error',
+                'text'=> 'Committee exists',
+                'options'=> json_encode([
+                    'autoClose'=> 2000
+                ])
+            ];
+            return redirect()->route('admin.dashboard');
         }
 
         
@@ -60,7 +76,14 @@ class CommitteeController extends Controller
         $committee->chair_person = $request->selected_chair_person;
         $committee->save();
         
-        return redirect()->route('admin.dashboard');
+        $message = [
+            'type'=>'success',
+            'text'=> 'Committee created successfully',
+            'options'=> '{
+                autoClose: 2000
+            }'
+        ];
+        return redirect()->route('admin.dashboard', compact('message'));
         // return "<script>alert('Committee Created')</script>";
     }
 

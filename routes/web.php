@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', Admin::class])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     
-    Route::post('/create/committee', [CommitteeController::class, 'store'])->name('committee.create');
+    // Route::post('/create/committee', [CommitteeController::class, 'store'])->name('committee.create');
     
     Route::prefix('reports')->group(function () {
         Route::get('/attendance_report.pdf', [ReportsController::class, 'attendanceReport'])->name('admin.attendanceReport');
