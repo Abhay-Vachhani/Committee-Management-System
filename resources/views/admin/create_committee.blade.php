@@ -9,8 +9,14 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- animation-->
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> --}}
+
+
     <style>
        
     /* font used */
@@ -163,7 +169,11 @@
             position: relative;
             top: 2px;
         }
-   
+    /*  */
+    footer a{
+        color: white;
+        text-decoration: none
+    }
     </style>
 </head>
 <body>
@@ -259,11 +269,11 @@
         </form>
     </div>
 </section>
-    <div class="container-fluid table-responsive">
-        <div class="mt-5">
-            <table class="table text-center table-striped table-hover border border-white"  id="meeting_data_table">
-                <thead class="font-lucida bg-darkblue text-white">
-                    <tr>
+<div class="container-fluid table-responsive">
+    <div class="mt-5">
+        <table class="table text-center table-striped table-hover border border-white"  id="meeting_data_table">
+            <thead class="font-lucida bg-darkblue text-white">
+                <tr>   
                         <th scope="col">Sr No.</th>
                         <th scope="col">Committee</th>
                         <th scope="col">No. of Members</th>
@@ -344,6 +354,7 @@
             </div>
         </div>
     </div>
+
     <!-- Report Modal -->
     <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-scrollable">
@@ -363,7 +374,6 @@
         </div>
     </div>
     </div>
-
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
@@ -428,6 +438,8 @@
         new DataTable('#meeting_data_table');
         new DataTable('#member_data_table');
     </script>
+    {{--  --}}
+    @include('footer')
 </body>
 
 </html>
