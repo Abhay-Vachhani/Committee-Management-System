@@ -47,6 +47,8 @@ Route::middleware(['auth', Admin::class])->prefix('admin')->group(function () {
         Route::get('/attendance_report.pdf', [ReportsController::class, 'attendanceReport'])->name('admin.attendanceReport');
         Route::get('/committee_constitution_report.pdf', [ReportsController::class, 'committeeConstitutionReport'])->name('admin.committeeConstitutionReport');
     });
+    Route::get('/committee',[CommitteeController::class,'index'])->name('admin.committee');
+    Route::post('/committee',[CommitteeController::class,'update'])->name('admin.committee');
 });
 
 // User routes
@@ -55,3 +57,7 @@ Route::middleware(['auth', Member::class])->group(function () {
         return 'Welcome, ' . Auth::user()->email;
     })->name('dashboard');
 });
+
+
+
+

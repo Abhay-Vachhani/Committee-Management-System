@@ -16,7 +16,8 @@ class CommitteeController extends Controller
      */
     public function index()
     {
-        //
+        $committees = Committee::get();
+        return view('admin.committee', compact('committees'));
     }
 
     /**
@@ -77,15 +78,24 @@ class CommitteeController extends Controller
      */
     public function edit(Committee $committee)
     {
-        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Committee $committee)
+    public function update(Request $request)
     {
-        //
+        $committee = Committee::findOrFail($request->id);
+        $committee->type = $request->type;
+        $committee->name = $request->name;
+        $committee->short_name = $request->short_name;
+        $committee->effect_date = $request->effect_date;
+        $committee->valid_upto = $request->valid_upto;
+        $committee->meeting_frequency = $request->meeting_frequency;
+        $committee->chair_person = $request->chair_person;
+        $committee->secratory = $request->secratory;
+        $committee->save();
+        return redirect()->route('admin.committee');
     }
 
     /**
