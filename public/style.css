@@ -1,0 +1,240 @@
+/* font used */
+
+.font-lucida {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif !important;
+}
+
+.font-verdana {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.bg-aliceblue {
+    background-color: aliceblue
+}
+
+.bg-darkblue {
+    background-color: #252258 !important;
+}
+
+.text-darkblue {
+    color: #252258 !important;
+}
+
+.bg-yellow {
+    background-color: #e4b953;
+}
+
+@media screen and (min-width: 600px) {
+    .container .row h3 {
+        text-align: center
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container .row h3 {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .med {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .med,
+    .med .new-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .row {
+        margin-top: 80px;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.container .row h3 {
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #b18f40;
+}
+
+.section {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.col-form-label {
+    font-size: 1.2em;
+    color: navy;
+}
+
+.bg-transparent {
+    color: white;
+}
+
+.form-control,
+.form-select {
+    padding: 10px;
+    font-size: large;
+}
+
+.card {
+    border: none;
+    box-shadow: 0px 0px 6px black;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change  here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-grad2 {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    margin: auto
+}
+
+.btn-grad2:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-control,
+.form-select {
+    background-color: transparent;
+    border: 2px solid #252258;
+}
+
+select {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.modal-body label {
+    padding: 9px 10px;
+    border: none;
+    box-shadow: 0px 0 4px black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form-check-input:checked {
+    background-color: #252258;
+    border: transparent;
+}
+
+.new-btn {
+    background-color: #252258;
+    color: white;
+    border: 1px solid #252258;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.new-btn:hover {
+    border: 1px solid #252258;
+    color: #252258;
+}
+
+.new-btn-reverse {
+    background-color: #b18f40;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.new-btn-reverse:hover {
+    background-color: #95762d;
+    color: white;
+}
+
+tbody tr:hover {
+    box-shadow: 0px 0px 4px black;
+    position: relative;
+    top: 2px;
+}
+
+tbody .form-control {
+
+    box-shadow: 0px 0px 2px black;
+}
+
+/*  */
+footer a {
+    color: white;
+    text-decoration: none
+}
+
+.sectiontable {
+    box-shadow: 0px 0px 4px black;
+}
+
+.form-control:focus {
+    border: 1px #252258 solid;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .container-fluid .row:hover {
+    background-color: #100d49 !important;
+}
+
+.img-2 {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    z-index: -1;
+    position: relative;
+    top: 62px;
+    /* background-color: white; */
+    z-index: auto;
+}
+
+.sectiontable .form-control {
+    background-color: white;
+    border: none;
+}
