@@ -16,170 +16,13 @@
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> --}}
 
-
-    <style>
-       
-    /* font used */
-    .font-lucida{
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',  Verdana, sans-serif !important;
-       }
-    .font-verdana{
-            font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-       }
-    .bg-aliceblue{
-         background-color: aliceblue
-     }
-     .bg-darkblue{
-        background-color: #252258 !important;
-     }
-     .text-darkblue{
-        color: #252258 !important;
-     }
-    @media screen and (min-width: 600px ) {
-                        .container .row h3 {
-                            text-align: center
-                        }
-        }
-    @media screen and (max-width: 600px ) {
-                        .container .row h3 {
-                            text-align: center;
-                        }
-        }
-
-    body{
-            box-sizing: border-box;
-        }
-
-    .container .row h3  {
-        letter-spacing: 1px;
-        word-spacing:1px;
-        margin-bottom:20px;
-        padding:10px;
-        background-color:#b18f40;
-    }
-    section{
-            background-image: url('../img/bg.jpg');
-            background-repeat: no-repeat ;
-            background-size: cover;
-            background-position: center;
-    }
-     .col-form-label{
-        font-size:1.4em;
-        color: navy;
-     }
-     .bg-transparent{
-        color: white;
-     }
-     .form-control,.form-select{
-        padding: 10px;
-        font-size: large;
-     }
-     .card{
-        border: none;
-        box-shadow:0px 0px 6px black;
-     }
-     .btn-grad {
-            background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
-            margin: 10px;
-            padding: 10px 30px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-            border: none;
-        }
-
-     .btn-grad:hover {
-            background-position: right center;
-            /* change the direction of the change  here */
-            color: #fff;
-            text-decoration: none;
-        }
-     .btn-grad2 {
-            background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
-            margin: 10px;
-            padding: 10px 30px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-            border: none;
-            margin: auto
-        }
-
-    .btn-grad2:hover {
-            background-position: right center;
-            /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-        }
-    .form-control,.form-select{
-            background-color: transparent;
-            border: 2px solid #252258;
-        }
-    select{
-            font-family: Verdana, Geneva, Tahoma, sans-serif
-        }
-    .modal-body label{
-            padding: 9px 10px;
-            border: none;
-            box-shadow: 0px 0 4px black;
-            border-radius: 5px;
-            margin-bottom: 20px;
-
-        }
-    .form-check-input:checked{
-            background-color: #252258;
-            border: transparent;
-        }
-    .new-btn{
-            background-color: #252258;
-            color: white;
-            border: 1px solid #252258;
-            border-radius: 4px;
-            padding: 10px;
-           
-        }
-    .new-btn:hover{
-            border: 1px solid #252258;
-            color: #252258;
-        }
-
-    .new-btn-reverse{
-            background-color: #b18f40;
-            color: white;
-            border: 1px solid transparent;
-            border-radius: 4px;
-            padding: 8px;
-        }
-    .new-btn-reverse:hover{
-            background-color:#95762d ;
-            color: white;
-        }
-    tbody tr:hover {
-            box-shadow: 0px 0px 4px black;
-            position: relative;
-            top: 2px;
-        }
-    /*  */
-    footer a{
-        color: white;
-        text-decoration: none
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}">
+    
 </head>
 <body>
     @include('header')
     {{--  --}}
-    <section>
+    <section class="section">
     <div class="container">
         <div class="row">
             <div class="col mt-5">
@@ -187,7 +30,84 @@
         </div>
         <form action="{{ route('committee.create') }}" method="POST">
             @csrf
-            <div class="row">
+            <div class="card border-success mb-3">
+                <div class="card-header bg-transparent bg-darkblue border-success fw-semibold fs-4" >Committee Constituion</div>
+                <div class="card-body bg-aliceblue">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row g-3 align-items-center ">
+                                <div class="col-md-3 col-12">
+                                    <label for="inputText" class="col-form-label font-verdana">Type</label>
+                                </div>
+                                <div class="col-md-5 col-12 ">
+                                    <select class="form-select" aria-label="Default select example" name="type">
+                                        <option value="1">Statutory</option>
+                                        <option value="0">Non Statutory</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row g-3 mt-2 align-items-center ">
+                                <div class="col-md-3 col-12">
+                                    <label for="inputText " class="col-form-label font-verdana">Name</label>
+                                </div>
+                                <div class="col-md-5 col-12 ">
+                                    <input type="text " class="form-control " name="name" onkeyup="handleShortName(this)">
+                                </div>
+                            </div>
+                            <div class="row g-3 mt-2 align-items-center ">
+                                <div class="col-md-3 col-12">
+                                    <label for="inputText " class="col-form-label font-verdana">Short Name</label>
+                                </div>
+                                <div class="col-md-5 col-12 ">
+                                    <input type="text " class="form-control" name="short_name" id="short_name">
+                                </div>
+                            </div>
+                            <div class="row g-3 mt-2 align-items-center ">
+                                <div class="col-md-3 col-12">
+                                    <label for="inputText " class="col-form-label font-verdana">Members</label>
+                                </div>
+                                <div class="col-md-5 col-12 ">
+                                    <button type="button" class="btn-grad" data-bs-toggle="modal" data-bs-target="#memberModal"> Select Members </button>
+                                        <span class="text-dark" id="selected_member_count">&nbsp;&nbsp;0 member selected</span>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row g-3 md-3 align-items-center ">
+                                <div class="col-md-3 col-12">
+                                    <label for="inputText" class="col-form-label font-verdana ">Effect Date</label>
+                                </div>
+                                <div class="col-md-5 col-12 ">
+                                    <input type="datetime-local" name="effect_date " class="form-control">
+                                </div>
+                            </div>
+                            <div class="row g-3 mt-2 align-items-center ">
+                                <div class="col-md-3 col-12">
+                                    <label for="inputText " class="col-form-label font-verdana">Meeting Frequency</label>
+                                </div>
+                                <div class="col-md-5 col-12 ">
+                                    <input type="number" value="0" min="0" max="20" class="form-control" name="meeting_frequency">
+                                </div>
+                            </div>
+                            <div class="row g-3 mt-2 align-items-center ">
+                                <div class="col-md-3 col-12">
+                                    <label for="inputText " class="col-form-label font-verdana">Restructuring Date</label>
+                                </div>
+                                <div class="col-md-5 col-12 ">
+                                    <input type="datetime-local" class="form-control" name="restructuring_date">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-2 align-items-center ">
+                        <div class="text-center btn-group-lg">
+                            <input type="submit" value="Create Committee" class="btn-grad2 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- <div class="row">
                 <div class="col col-12 col-sm-12 col-md-12">
                     <div class="card border-success mb-3">
                         <div class="card-header bg-transparent bg-darkblue border-success fw-semibold fs-4" >Committee Constituion</div>
@@ -262,7 +182,7 @@
                     </div>
                 </div>
                 <div class="col "></div>
-            </div>
+            </div> --}}
             <input type="hidden" id="selected_chair_person" name="selected_chair_person">
             <input type="hidden" id="selected_secratory" name="selected_secratory">
             <input type="hidden" id="selected_member" name="selected_member">

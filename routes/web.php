@@ -32,6 +32,11 @@ Route::get('/', function () {
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
+// admin screen - 3
+Route::get('/admin/add-member', function () {
+    return view('admin.admin_3');
+});
+// 
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -40,9 +45,9 @@ Route::middleware('auth')->group(function () {
 // Admin routes
 Route::middleware(['auth', Admin::class])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-    
+
     Route::post('/create/committee', [CommitteeController::class, 'store'])->name('committee.create');
-    
+
     Route::prefix('reports')->group(function () {
         Route::get('/attendance_report.pdf', [ReportsController::class, 'attendanceReport'])->name('admin.attendanceReport');
         Route::get('/committee_constitution_report.pdf', [ReportsController::class, 'committeeConstitutionReport'])->name('admin.committeeConstitutionReport');
