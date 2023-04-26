@@ -1,5 +1,3 @@
-@include('header')
-
 <!doctype html>
 <html lang="en">
 
@@ -21,6 +19,7 @@
 
 <body>
     <div class="container">
+        @include('admin.header-admin')
         <!--  -->
         <section >
             <div class="box mt-3 mb-3">
@@ -29,7 +28,6 @@
                 </h5>
             </div>
         </section>
-        <!--  -->
         <!-- Content -->
         <section class="sectiontable">
             <table class="table table-hover table-striped">

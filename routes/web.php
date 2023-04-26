@@ -30,6 +30,7 @@ Route::get('/', function () {
     return redirect()->route('dashboard');
 });
 
+
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 // admin screen - 3
@@ -37,6 +38,12 @@ Route::get('/admin/add-member', function () {
     return view('admin.admin_3');
 });
 // 
+
+//
+Route::get('/user/add-meeting', function () {
+    return view('user.user_2');
+});
+//
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

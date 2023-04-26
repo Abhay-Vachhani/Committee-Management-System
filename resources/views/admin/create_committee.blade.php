@@ -20,7 +20,7 @@
     
 </head>
 <body>
-    @include('header')
+    @include('admin.header-admin')
     {{--  --}}
     <section class="section">
     <div class="container">
@@ -41,7 +41,8 @@
                                     <label for="inputText" class="col-form-label font-verdana">Type</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
-                                    <select class="form-select" aria-label="Default select example" name="type">
+                                    <select class="form-select" aria-label="Default select example" name="type" required >
+                                        <option></option>
                                         <option value="1">Statutory</option>
                                         <option value="0">Non Statutory</option>
                                     </select>
@@ -52,7 +53,7 @@
                                     <label for="inputText " class="col-form-label font-verdana">Name</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
-                                    <input type="text " class="form-control " name="name" onkeyup="handleShortName(this)">
+                                    <input type="text " class="form-control " name="name" onkeyup="handleShortName(this)" required>
                                 </div>
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
@@ -60,7 +61,7 @@
                                     <label for="inputText " class="col-form-label font-verdana">Short Name</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
-                                    <input type="text " class="form-control" name="short_name" id="short_name">
+                                    <input type="text " class="form-control" name="short_name" id="short_name" required>
                                 </div>
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
@@ -79,7 +80,7 @@
                                     <label for="inputText" class="col-form-label font-verdana ">Effect Date</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
-                                    <input type="datetime-local" name="effect_date " class="form-control">
+                                    <input type="datetime-local" name="effect_date " class="form-control" required>
                                 </div>
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
@@ -87,7 +88,7 @@
                                     <label for="inputText " class="col-form-label font-verdana">Meeting Frequency</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
-                                    <input type="number" value="0" min="0" max="20" class="form-control" name="meeting_frequency">
+                                    <input type="number" value="0" min="0" max="20" class="form-control" name="meeting_frequency" required maxlength="20">
                                 </div>
                             </div>
                             <div class="row g-3 mt-2 align-items-center ">
@@ -95,7 +96,7 @@
                                     <label for="inputText " class="col-form-label font-verdana">Restructuring Date</label>
                                 </div>
                                 <div class="col-md-5 col-12 ">
-                                    <input type="datetime-local" class="form-control" name="restructuring_date">
+                                    <input type="datetime-local" class="form-control" name="restructuring_date" required>
                                 </div>
                             </div>
                         </div>
