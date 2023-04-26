@@ -21,7 +21,6 @@
 
 <body>
     <div class="container">
-        {{-- @include('header') --}}
         <!--  -->
         <section >
             <div class="box mt-3 mb-3">
@@ -34,11 +33,11 @@
         <!-- Content -->
         <section class="sectiontable">
             <table class="table table-hover table-striped">
+                <form action="#" method="POST">
                 <thead class="font-lucida bg-yellow">
                     <tr>
                         <th colspan="2">
                             <div class="row">
-
                                 <div class="col-md-4 col-12 text-center text-md-start">
                                     Add Member
                                 </div>
@@ -114,7 +113,7 @@
                             Mobile No.
                         </td>
                         <td>
-                            <input type="number" class="form-control" name="contact" placeholder="Enter contact">
+                            <input type="number" class="form-control" name="mobile" placeholder="Enter contact">
                         </td>
                     </tr>
                     <tr>
@@ -131,6 +130,7 @@
                         </td>
                     </tr>
                 </tbody>
+            </form>
             </table>
         </section> <!-- Section Ending-->
     </div>
