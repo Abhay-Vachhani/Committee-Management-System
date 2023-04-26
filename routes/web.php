@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommitteeController;
 use App\Http\Controllers\ReportsController;
+use App\Http\Controllers\MemberController;
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\Member;
 use Illuminate\Support\Facades\Auth;
@@ -43,9 +44,14 @@ Route::middleware(['auth', Admin::class])->prefix('admin')->group(function () {
     
     Route::post('/create/committee', [CommitteeController::class, 'store'])->name('committee.create');
     
+    Route::get('/member/create',[MemberController::class,'create'])->name('member.create');
+
+    Route::post('/member',[MemberController::class,'store'])->name('member.store');
+    
     Route::prefix('reports')->group(function () {
         Route::get('/attendance_report.pdf', [ReportsController::class, 'attendanceReport'])->name('admin.attendanceReport');
         Route::get('/committee_constitution_report.pdf', [ReportsController::class, 'committeeConstitutionReport'])->name('admin.committeeConstitutionReport');
+    
     });
 });
 
@@ -55,3 +61,4 @@ Route::middleware(['auth', Member::class])->group(function () {
         return 'Welcome, ' . Auth::user()->email;
     })->name('dashboard');
 });
+

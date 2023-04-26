@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class MemberController extends Controller
 {
@@ -20,7 +23,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.create');
     }
 
     /**
@@ -28,7 +31,24 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make('password');
+        $user->save();
+
+        DB::table('members')->insert([
+            'user_id' => $user->id,
+            'type' => $request->type,
+            'name' => $request->name,
+            'designation' => $request->designation,
+            'department' => $request->department,
+            'organization' => $request->organization,
+            'email' => $request->email,
+            'mobile' => $request->mobile,
+            'address' => $request->address,
+        ]);
+        return redirect()->route('admin.dashboard');
     }
 
     /**
