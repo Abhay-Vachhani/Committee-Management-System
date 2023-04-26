@@ -16,35 +16,6 @@
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <style>
        
-
-        /* .font-lucida {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif !important;
-        }
-
-        .font-verdana {
-            font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-        }
-
-        .bg-aliceblue {
-            background-color: aliceblue
-        }
-
-        .bg-darkblue {
-            background-color: #252258 !important;
-        } */
-
-        /* .new-btn {
-            background-color: #252258;
-            color: white;
-            border: 1px solid #252258;
-            border-radius: 4px;
-        }
-
-        .new-btn:hover {
-            border: 1px solid #252258;
-            color: #252258;
-        } */
-
     </style>
 </head>
 
