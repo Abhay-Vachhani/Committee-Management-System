@@ -32,6 +32,8 @@
         <section class="sectiontable">
             <table class="table table-hover table-striped">
                 <form action="#" method="POST">
+                    {{-- @csrf --}}
+                    {{-- {{route('member.store')}} --}}
                 <thead class="font-lucida bg-yellow">
                     <tr>
                         <th colspan="2">

@@ -145,7 +145,7 @@
 				</div>
 				<div class="mb-3">
 					<input type="password" name="password" class="form-control" placeholder="Enter Password"
-						id="exampleInputPassword1" value="admn" required>
+						id="exampleInputPassword1" value="admin" required>
 				</div>
 				<!-- <div class="mb-3 form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1" required><label class="form-check-label" for="exampleCheck1">Check me out</label></div> -->
 				<hr>

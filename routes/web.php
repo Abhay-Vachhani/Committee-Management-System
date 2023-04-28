@@ -27,6 +27,8 @@ Route::get('/', function () {
     if (Auth::user()->is_admin)
         return redirect()->route('admin.dashboard');
 
+    // return view('user.user_2');
+    // return redirect()->route('user.footer');
     return redirect()->route('dashboard');
 });
 
