@@ -42,7 +42,7 @@ class CommitteeController extends Controller
         $committee->name = $request->name;
         $committee->short_name = $request->short_name;
         $committee->effect_date = $request->effect_date;
-        $committee->restructuring_date = $request->restructuring_date;
+        $committee->valid_upto = $request->valid_upto;
         $committee->meeting_frequency = $request->meeting_frequency;
         $committee->save();
         

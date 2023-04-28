@@ -21,7 +21,7 @@ class CommitteeFactory extends Factory
             'name' => $this->faker->sentence(3),
             'short_name' => $this->faker->unique()->sentence(1),
             'effect_date' => $this->faker->date(),
-            'restructuring_date' => $this->faker->date(),
+            'valid_upto' => $this->faker->date(),
             'meeting_frequency' => $this->faker->numberBetween(1, 7)
         ];
     }
