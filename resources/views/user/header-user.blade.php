@@ -8,7 +8,7 @@
                     height:220px;
                     display: block;
                     margin-left: auto;
-                    margin-right: auto;
+                    margin-right: auto;x
                     width: 50%;
                 }
             }
@@ -19,8 +19,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a href="{{'http://127.0.0.1:8000/user/add-com'}}">
-                            <img src="{{ asset('img/Header.jpg' )}}"class=" animate__animated animate__zoomIn" style="width:100%;height:auto;" alt="">
+                        <a href="{{'http://127.0.0.1:8000/user/add-meeting'}}">
+                            <img src="{{ asset('img/Header.png' )}}"class=" animate__animated animate__zoomIn" style="width:100%;height:auto;" alt="">
                         </a>
                     </div>
                 </div>
