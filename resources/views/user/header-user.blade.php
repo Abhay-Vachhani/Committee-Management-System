@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-        <style>
+        {{-- <style>
             @media screen and (max-width: 480px) {
                 img {
                     margin-top: 20px;
@@ -12,7 +12,7 @@
                     width: 50%;
                 }
             }
-        </style>
+        </style> --}}
     </head>
     <body>
         <header>

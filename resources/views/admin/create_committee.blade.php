@@ -360,7 +360,8 @@
         new DataTable('#member_data_table');
     </script>
     {{--  --}}
-    @include('footer')
+    {{-- footer --}}
+     @include('footer')
 </body>
 
 </html>

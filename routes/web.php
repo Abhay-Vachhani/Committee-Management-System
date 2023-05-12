@@ -42,10 +42,6 @@ Route::get('/admin/add-member', function () {
 // 
 
 //
-Route::get('/user/add-meeting', function () {
-    return view('user.user_2');
-});
-//
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -69,3 +65,13 @@ Route::middleware(['auth', Member::class])->group(function () {
         return 'Welcome, ' . Auth::user()->email;
     })->name('dashboard');
 });
+
+Route::get('/user/add-meeting', function () {
+    return view('user.index_user');
+});
+//
+
+Route::get('/user/select', function () {
+    return view('user.userScreen_3');
+});
+//

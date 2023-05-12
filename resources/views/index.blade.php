@@ -33,110 +33,34 @@
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     
 	<style>
+    footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+	}
     /* new */
-		.body {
-			background-color: #252258;
-			background-image: url(img/bg_bg.png);
-			/* The image used */
-			height: auto;
-			/* You must set a specified height */
-			background-position: center;
-			/* Center the image */
-			background-repeat: no-repeat;
-			/* Do not repeat the image */
-			background-size: cover;
+	body {
+		background: url(img/bg_bg.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+
 		}
-		.form-control {
+	.form-control {
 			border: 1px solid #252258
 		}
-
-		/* Center the loader */
-		#loader {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			z-index: 1;
-			width: 120px;
-			height: 120px;
-			margin: -76px 0 0 -76px;
-			border: 10px solid #f3f3f3;
-			border-radius: 50%;
-			border-top: 10px solid #252258;
-			-webkit-animation: spin 2s linear infinite;
-			animation: spin 2s linear infinite;
-		}
-
-		@-webkit-keyframes spin {
-			0% {
-				-webkit-transform: rotate(0deg);
-			}
-
-			100% {
-				-webkit-transform: rotate(360deg);
-			}
-		}
-
-		@keyframes spin {
-			0% {
-				transform: rotate(0deg);
-			}
-
-			100% {
-				transform: rotate(360deg);
-			}
-		}
-
-		/* Add animation to "page content" */
-		.animate-bottom {
-			position: relative;
-			-webkit-animation-name: animatebottom;
-			-webkit-animation-duration: 1s;
-			animation-name: animatebottom;
-			animation-duration: 1s
-		}
-
-		@-webkit-keyframes animatebottom {
-			from {
-				bottom: -100px;
-				opacity: 0
-			}
-
-			to {
-				bottom: 0px;
-				opacity: 1
-			}
-		}
-
-		@keyframes animatebottom {
-			from {
-				bottom: -100px;
-				opacity: 0
-			}
-
-			to {
-				bottom: 0;
-				opacity: 1
-			}
-		}
-
-		#myDiv {
-			display: none;
-			text-align: center;
-		}
-
-		@media screen and (min-width: 992px) {}
 	</style>
 </head>
-
 <body class="body" onload="myFunction()">
 	<div id="loader"></div>
 	<div class="container animate-bottom" style=" display:none;" id="myDiv">
 		@include('admin.header-admin')
 		<div class="login row ">
-			<form class="col-11 col-sm-10 col-md-7 col-lg-4 px-5 animate__animated animate__fadeIn" action="{{ route('login') }}" method="post">
+			<form class="col-11 col-sm-10 col-md-7 col-lg-4 px-5 mt-sm-5 mt-xs-5 mt-lg-5   animate__animated animate__fadeIn" action="{{ route('login') }}" method="post">
                 @csrf
-				<div class="text-left mb-4">
-					<h4 class="font-lucida text-start">Login...</h4>
+				<div class="text-left mb-3">
+					<h4 class="font-lucida text-center">Login</h4>
 				</div>
 				<hr>
 				<div class="mb-3">
@@ -160,7 +84,6 @@
 	<!-- Pre loader -->
 	<script>
 		var myVar;
-
 		function myFunction() {
 			myVar = setTimeout(showPage, 100);
 		}
@@ -170,7 +93,6 @@
 			document.getElementById("myDiv").style.display = "block";
 		}
 	</script>
-	<!-- Footer Ending -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
 		crossorigin="anonymous"></script>
