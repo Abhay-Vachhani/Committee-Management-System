@@ -2,36 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add Meeting</title>
-
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- animation-->
-    
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
-    integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
-    
-    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    
-    {{-- icons --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    @include('title')
     <style>
          body {
             background-color: #fbfbfb;
+            background-attachment: fixed
         }
     </style>
 </head>
 <body>
     @include('user.header-user')
-    <div class="container">     
+    <div class="container" style="min-height: vh;">     
         <div class="card box-shadow mt-3 ">
             <div class="card-body">
                 <form action="#" method="POST">
@@ -65,9 +47,9 @@
                         </tbody>
                     </table>
                     <a href="#" class="btn new-btn col-sm-12 col-md-4 col-lg-2"> Arrange Metting</a>
-                </form>
-            </div>
+               </form>
         </div>
+    </div>
     </div>
     <div class="container-fluid mt-5">
         <h3 class="font-verdana mx-3">

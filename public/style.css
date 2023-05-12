@@ -359,3 +359,13 @@ footer .container-fluid .row:hover {
         display: none;
     }
 }
+
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #fbfbfb;
+    background-attachment: fixed
+}

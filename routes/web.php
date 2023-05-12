@@ -71,7 +71,17 @@ Route::get('/user/add-meeting', function () {
 });
 //
 
+Route::get('/user/user-two', function () {
+    return view('user.userScreen_2');
+});
+//
+
 Route::get('/user/select', function () {
     return view('user.userScreen_3');
+});
+//
+
+Route::get('/user/user-four', function () {
+    return view('user.userScreen_4');
 });
 //

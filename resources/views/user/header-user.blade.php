@@ -1,18 +1,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-        {{-- <style>
-            @media screen and (max-width: 480px) {
-                img {
-                    margin-top: 20px;
-                    height:220px;
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;x
-                    width: 50%;
-                }
-            }
-        </style> --}}
     </head>
     <body>
         <header>

@@ -1,4 +1,4 @@
-<footer>
+<footer class="w-100">
     <div class="container-fluid">
         <img src="../img/Logo.png" class="img-2 ">
         <div class="row bg-darkblue text-white text-center p-4 con">
