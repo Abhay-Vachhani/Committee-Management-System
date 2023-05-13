@@ -33,10 +33,10 @@
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     
 	<style>
-    footer {
+    /* footer {
     position: fixed;
     bottom: 0;
-	}
+	} */
     /* new */
 	body {
 		background: url(img/bg_bg.png);
@@ -53,7 +53,7 @@
 </head>
 <body class="body" onload="myFunction()">
 	<div id="loader"></div>
-	<div class="container animate-bottom" style=" display:none;" id="myDiv">
+	<div class="container animate-bottom " style=" display:none; min-height:85vh" id="myDiv">
 		@include('admin.header-admin')
 		<div class="login row ">
 			<form class="col-11 col-sm-10 col-md-7 col-lg-4 px-5 mt-sm-5 mt-xs-5 mt-lg-5   animate__animated animate__fadeIn" action="{{ route('login') }}" method="post">

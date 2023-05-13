@@ -66,6 +66,10 @@ Route::middleware(['auth', Member::class])->group(function () {
     })->name('dashboard');
 });
 
+Route::get('/user/linking', function () {
+    return view('user.01_linking_user');
+});
+//
 Route::get('/user/add-meeting', function () {
     return view('user.index_user');
 });
