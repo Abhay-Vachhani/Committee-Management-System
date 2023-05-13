@@ -20,7 +20,6 @@
             <div class="card border-success mb-3">
                 <div class="card-header bg-transparent bg-darkblue border-success fw-semibold fs-4" >Committee Constituion</div>
                 <div class="card-body bg-aliceblue">
-
                     <div class="row">
                         <div class="col-md-6">
                             <div class="row g-3 align-items-center ">
@@ -224,7 +223,7 @@
             <div class="modal-dialog modal-xl modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5 fw-bold fs-4" id="memberModalLabel"> Select Members </h1>
+                        <h1 class="modal-title fs-5 fw-bold fs-4 font-verdana" id="memberModalLabel"> Select Members </h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body font-verdana">
@@ -349,6 +348,7 @@
     {{--  --}}
     {{-- footer --}}
      @include('footer')
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 
 </html>
